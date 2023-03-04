@@ -20,12 +20,15 @@ enum Button_State{
 /* 按钮参数结构体 */
 typedef struct Button_Param_Structure{
     uint8_t pin;
-    uint8_t key;
+    int press_cnt=0;
+    int release_cnt=0;
     uint8_t state=RELEASED;
 } button_type;
 
 void Button_Init();
-uint8_t Get_Button_State(uint8_t Buttonx);
-
+void Refresh_Button_State(int Buttonx);
+uint8_t Get_Button_State(int Buttonx);
+void Set_Button_State(int Buttonx,uint8_t state_);
+void Button_Suspend(int Buttonx);
 
 #endif

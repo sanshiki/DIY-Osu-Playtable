@@ -11,10 +11,10 @@ void Remote_Keyboard_Press_Down(uint8_t Buttonx)
 {
     switch(Buttonx)
     {
-        case 1:Keyboard.press(BUTTON_1_KEY);break;
-        case 2:Keyboard.press(BUTTON_2_KEY);break;
-        case 3:Keyboard.press(BUTTON_3_KEY);break;
-        case 4:Keyboard.press(BUTTON_4_KEY);break;
+        case 0:Keyboard.press(BUTTON_1_KEY);break;
+        case 1:Keyboard.press(BUTTON_2_KEY);break;
+        case 2:Keyboard.press(BUTTON_3_KEY);break;
+        case 3:Keyboard.press(BUTTON_4_KEY);break;
     }
 }
 
@@ -23,9 +23,19 @@ void Remote_Keyboard_Release(uint8_t Buttonx)
 {
     switch(Buttonx)
     {
-        case 1:Keyboard.release(BUTTON_1_KEY);break;
-        case 2:Keyboard.release(BUTTON_2_KEY);break;
-        case 3:Keyboard.release(BUTTON_3_KEY);break;
-        case 4:Keyboard.release(BUTTON_4_KEY);break;
+        case 0:Keyboard.release(BUTTON_1_KEY);break;
+        case 1:Keyboard.release(BUTTON_2_KEY);break;
+        case 2:Keyboard.release(BUTTON_3_KEY);break;
+        case 3:Keyboard.release(BUTTON_4_KEY);break;
     }
+}
+
+void Remote_Keyboard_Print(char content[])
+{
+    Keyboard.print(content);
+}
+
+void Remote_Keyboard_Print_Num(int num)
+{
+    Keyboard.print(num);
 }
