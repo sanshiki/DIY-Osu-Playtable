@@ -12,7 +12,7 @@ uint8_t Button_Press_Count[BUTTON_NUM+1] = {0};
 uint8_t Button_Release_Count[BUTTON_NUM+1] = {0};
 
 /* 防误触阈值 */
-int Threshold = 5;
+int Threshold = 14;
 
 /* 初始化按钮对象 */
 static void Buttonx_Init(button_type *buttonx, uint8_t pin_)

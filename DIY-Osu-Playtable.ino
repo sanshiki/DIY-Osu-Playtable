@@ -8,14 +8,10 @@ void setup()
     Button_Init();
     LED_Init();
     Remote_Keyboard_Init();
-    pinMode(6,OUTPUT);
-    pinMode(7,OUTPUT);
 }
 
 void loop()
 {
-    digitalWrite(6,LOW);
-    digitalWrite(7,LOW);
     for(int i=0;i<BUTTON_NUM;i++)
     {
         Refresh_Button_State(i);
